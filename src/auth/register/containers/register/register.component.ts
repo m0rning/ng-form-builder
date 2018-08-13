@@ -12,9 +12,7 @@ import { AuthService } from '../../../shared/services/auth/auth.service';
       <auth-form (submitted)="registerUser($event)">
         <h1>Register</h1>
         <a routerLink="/auth/login">Already have an account?</a>
-        <button type="submit">
-          Create account
-        </button>
+        <button mat-flat-button type="submit" color="primary">Create account</button>
         <div class="error" *ngIf="error">
           {{ error }}
         </div>

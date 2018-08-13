@@ -1,6 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material';
 
 // components
 import { AuthFormComponent } from './components/auth-form/auth-form.component';
@@ -14,6 +15,7 @@ import { AuthGuard } from './guards/auth.guard';
 @NgModule({
   imports: [
     CommonModule,
+    MatInputModule,
     ReactiveFormsModule
   ],
   declarations: [

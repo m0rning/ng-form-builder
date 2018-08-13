@@ -13,7 +13,7 @@ export class AuthGuard implements CanActivate {
   ) {}
 
   canActivate() {
-    return !!this.authService.authState
+    return this.authService.authState
       .pipe(
         map((user) => {
           if (!user) {

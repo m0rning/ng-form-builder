@@ -1,0 +1,28 @@
+<div class="auth-form">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <ng-content select="h1"></ng-content>
+    <mat-form-field class="form-field">
+      <input matInput type="email"
+             class="form-input"
+             placeholder="Email address"
+             formControlName="email"
+             autocomplete="off">
+      <mat-error *ngIf="emailFormat">Invalid email format</mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput type="password"
+             class="form-input"
+             placeholder="Enter password"
+             formControlName="password"
+             autocomplete="off">
+      <mat-error *ngIf="passwordInvalid">Password is required</mat-error>
+    </mat-form-field>
+    <ng-content select=".error"></ng-content>
+    <div class="auth-form__action">
+      <ng-content select="button"></ng-content>
+    </div>
+    <div class="auth-form__toggle">
+      <ng-content select="a"></ng-content>
+    </div>
+  </form>
+</div>

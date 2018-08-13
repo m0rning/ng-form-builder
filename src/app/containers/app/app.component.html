@@ -1,2 +1,9 @@
-<h2>Hello world
-</h2>
+<app-header
+  [user]="user$ | async"
+  (logout)="onLogout()">
+</app-header>
+<div class="wrapper">
+  <router-outlet></router-outlet>
+</div>
+
+

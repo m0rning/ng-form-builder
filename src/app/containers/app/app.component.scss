@@ -1,0 +1,14 @@
+@import "../../components/app-header/app-header.component.scss";
+
+:host {
+  width: 100%;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(96% - #{$header-height});
+  max-width: 800px;
+  width: 96%;
+  margin: 0 auto;
+}

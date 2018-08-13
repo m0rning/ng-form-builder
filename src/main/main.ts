@@ -8,9 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../auth/shared/guards/auth.guard';
 
 export const ROUTES: Routes = [
-  { path: 'main', canActivate: [AuthGuard], loadChildren: './schedule/schedule.module#ScheduleModule' },
-  { path: 'meals', canActivate: [AuthGuard], loadChildren: './meals/meals.module#MealsModule' },
-  { path: 'workouts', canActivate: [AuthGuard], loadChildren: './workouts/workouts.module#WorkoutsModule' }
+  { path: 'form-builder', canActivate: [AuthGuard], loadChildren: './form-builder/form-builder.module#FormBuilderModule' },
 ];
 
 @NgModule({
@@ -19,4 +17,4 @@ export const ROUTES: Routes = [
     // SharedModule.forRoot()
   ]
 })
-export class FormBuilderModule {}
+export class MainModule {}

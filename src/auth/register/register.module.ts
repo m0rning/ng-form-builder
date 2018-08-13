@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { MatButtonModule } from '@angular/material';
 
 import { SharedModule } from '../shared/shared.module';
 
@@ -13,6 +14,7 @@ export const ROUTES: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    MatButtonModule,
     RouterModule.forChild(ROUTES),
     SharedModule
   ],
